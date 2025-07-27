@@ -569,14 +569,6 @@ git push origin member-update-2025
 - **将来の予定**: 進学予定・就職予定など
 ```
 
-### メンバー写真の追加（オプション）
-
-```markdown
-#### 教授 - 後藤 寛明
-![後藤教授](/images/members/goto-sensei.jpg)
-- **専門分野**: 有機合成化学、触媒化学、精密分子設計
-```
-
 **画像の保存場所**: `images/members/` ディレクトリを作成して保存
 
 ---
