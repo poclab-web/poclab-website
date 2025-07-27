@@ -1,56 +1,152 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Physical Organic Chemistry Labolatory(POCLAB)"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+# Welcome to POCLAB
+physical organic chemistry labolatory since 2018 
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+私たちは、**化学構造の情報を整理し世界中の人々がアクセスして使えるようにしていきます**。
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+## 📄 研究室紹介
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+私たちの研究室について詳しく紹介した資料をご覧いただけます。
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+![POCLAB研究室紹介](/images/labintro-preview.png)
+*研究室紹介資料のプレビュー*
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+### [📥 研究室紹介PDFをダウンロード](/files/labintro.pdf){: .btn .btn--success .btn--large}
 
-Site-wide configuration
+---
+
+## 🧭 ミッション
 ------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
 
-Create content & metadata
+### 革新的な分子と反応の設計方法を推進する
+
+私たちの研究は、化学の根幹にある分子の設計と化学反応の最適化に焦点を当てています。
+
+化学は「セントラルサイエンス」として、薬品開発、材料科学、環境技術など、多くの科学技術分野において重要な役割を果たしています。
+
+しかし、これまでの化学研究は時間とコストがかかり、実験ベースでの試行錯誤に依存してきました。
+
+ケモインフォマティクス（化学情報学）や物理有機化学は、このプロセスを劇的に加速させ、計算的なアプローチを活用することで、新しい分子や化学反応を効率的かつ正確に予測・設計する手段を提供することが可能です。
+
+データ駆動型のアプローチを用いることで、実験の無駄を省き、環境負荷を低減しながら、より革新的な分子と反応を開発することが可能になります。
+
+## 🔍 ビジョン
+
 ------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
 
-**Markdown generator**
+### セントラルサイエンスである化学を基盤に、データ駆動型アプローチで持続可能な未来を創る
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+化学は「セントラルサイエンス」として、物理学や生物学、エンジニアリングなど、他の多くの科学分野と密接に関わっています。
 
-How to edit your site's GitHub repository
+そのため、化学の進歩は他の分野にも直接的な影響を与え、薬品開発、エネルギー変換、環境保護、新材料の創出など、さまざまな産業に貢献しています。
+
+この中心的な役割を持つ化学を基盤にして研究を進めることで、広範な分野での科学技術の進展を加速させることが可能です。
+
+さらに、私たちはこの化学の中心的役割を、データ駆動型アプローチによって一層強化します。
+
+現代の科学技術では、大量のデータを解析し、それに基づいて意思決定を行うことが不可欠です。
+
+ケモインフォマティクスでは、計算化学や機械学習を活用して、実験データやシミュレーションデータから有用な知見を引き出し、新しい分子や反応の設計に生かすことができます。
+
+このアプローチにより、従来の実験的アプローチの制約を超え、より迅速かつ効率的に新しい技術や材料を開発することが可能になります。最終的には、これが環境負荷の低減やエネルギー効率の向上、持続可能な社会の実現に直結し、未来に対する責任を果たすことができるのです。
+
+## ⚖️ バリュー
+
 ------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+### 研究の進め方
 
-For more info
+私たちは、概念実証を重視し、実験、計算、機械学習を融合させながら革新的な研究を推進します。また、化学構造を基盤とした設計思考を取り入れ有機化合物の可能性を追求していきます。さらに、オープンな知識共有と国際的視点を大切にし、グローバルに最適なソリューションを追求します。現実を冷静に見つめながらも、明るい未来を描いていきます。
+
+#### 🔬 **概念実証 (Proof of Concept)**
+
+新しいアイデアや手法の実用性を迅速に検証し、失敗を恐れずに挑戦を続けることで、革新的な成果を引き出す。実験を含むPoC（Proof of Concept：概念実証）を通じて、実用性の確認を迅速に行い、次のステップへ進む判断を下す。
+
+#### 🔄 **実験、計算、機械学習**
+
+実験データ、計算モデル、そして最先端の機械学習アルゴリズムを統合し、予測と実証を高速に繰り返すことで、効率的かつ効果的な化学研究を推進する。この融合によって、化学の新たな発見を加速させる。
+
+#### ⚛️ **化学構造から考える**
+
+化学構造の理解を基盤に、分子レベルでの特性や反応性を探求し、それをもとに設計思考を展開する。化学構造が示す根本的な性質に基づいて、革新的な分子や材料を設計し、新しい可能性を追求する。
+
+#### 🌐 **オープン**
+
+知識や成果をオープンに共有し、他分野の研究者や産業界とのコラボレーションを積極的に推進する。オープンイノベーションを通じて、全体の科学技術の進展を加速させる。
+
+#### 🌍 **グローバルで最適化**
+
+国際的な視点を持ち、研究の成果が世界中で適用できるように、普遍的かつ持続可能なソリューションを追求する。グローバルな課題に対応するための最適なアプローチを考慮し、全体としてのベストプラクティスを実行する。
+
+#### 🌟 **楽観主義**
+
+現実の複雑さを理解しつつ、常に問題解決に向けた前向きなアプローチを持つ。ミクロな視点でリスクを適切に評価し、マクロな視点で持続可能な未来を描く。この両方の視点をバランスよく持つことで、持続的な成長と成功を実現する。
+
+## メンバー募集
+
 ------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+
+分子や反応の世界で新しい発見を目指す仲間を歓迎します。
+
+### 🎓 **研究室配属を希望する学生へ**
+
+- 化学・生命系学科の学生
+- 有機化学・材料化学・創薬化学に興味のある方
+- 実験研究に積極的に取り組める方
+- 論理的思考力と創造性を備えた方
+
+### 🔬 **大学院進学を検討中の方へ**
+
+- 修士課程・博士課程の学生募集中
+- 他大学からの進学も歓迎
+- 研究テーマの事前相談可能
+- 学会発表・論文投稿のサポート充実
+
+## 最新情報
+
+------
+
+研究室の最新の研究成果や活動については、以下のリンクからご確認ください：
+
+- 📊 [Publications](/publications/) - 研究論文・学会発表
+- 🎤 [Talks](/talks/) - 招待講演・学会発表
+- 👨‍🏫 [Teaching](/teaching/) - 教育活動・講義情報
+- 📁 [Portfolio](/portfolio/) - 研究プロジェクト・共同研究
+- 👥 [Members](/members/) - 研究室メンバー紹介
+
+## お問い合わせ
+
+------
+
+研究内容や研究室見学について、お気軽にお問い合わせください。
+
+**研究室所在地**: 横浜国立大学 理工学部  
+**メール**: [お問い合わせフォーム](mailto:contact@poclab.example.org)  
+**研究者情報**: [横浜国立大学研究者総覧](https://er-web.ynu.ac.jp/html/GOTO_Hiroaki/ja.html)
+
+### 📍 **アクセス情報**
+
+- **キャンパス**: 横浜国立大学 常盤台キャンパス
+- **最寄り駅**: 相鉄本線「和田町駅」徒歩15分、横浜市営地下鉄「三ツ沢上町駅」徒歩16分
+- **住所**: 〒240-8501 神奈川県横浜市保土ケ谷区常盤台79-5
+
+## リンク
+
+------
+
+- [横浜国立大学](https://www.ynu.ac.jp/)
+- [理工学部](https://www.eng.ynu.ac.jp/)
+- [化学・生命系学科](https://chem-bio.ynu.ac.jp/)
+- [GitHub Repository](https://github.com/gotoh-poclab)
+
+------
+
+*このページは研究室の活動状況に応じて随時更新されます。最新情報については各セクションのリンクをご確認ください。*

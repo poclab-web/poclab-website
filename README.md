@@ -1,58 +1,174 @@
 # Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+**Academic Pagesは、個人および研究者向けポートフォリオWebサイトのためのGitHub Pagesテンプレートです。**
 
 ![Academic Pages template example](images/homepage.png "Academic Pages template example")
 
-# Getting Started
+# はじめに
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+1. GitHubアカウントを作成し（まだ持っていない場合）、メールアドレスを確認してください（必須！）
+2. 右上の「Use this template」ボタンをクリックします
+3. 「New repository」ページで、リポジトリ名を「[あなたのGitHubユーザー名].github.io」として入力します。これがWebサイトのURLにもなります
+4. サイト全体の設定を行い、コンテンツを追加します
+5. ファイル（PDF、.zipファイルなど）を`files/`ディレクトリにアップロードします。これらは https://[あなたのGitHubユーザー名].github.io/files/example.pdf でアクセスできます
+6. リポジトリの設定の「GitHub pages」セクションでステータスを確認します
+7. （オプション）`markdown_generator`フォルダー内のJupyter notebookやPythonスクリプトを使用して、TSVファイルから論文や講演のMarkdownファイルを生成できます
 
-See more info at https://academicpages.github.io/
+詳細は https://academicpages.github.io/ をご覧ください。
 
-## Running locally
+## ローカル環境での実行
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+リポジトリをクローンした後、ローカルでWebサイトをプレビューするには以下の手順に従ってください。
 
-1. Clone the repository and made updates as detailed above.
+### macOSユーザー向け
 
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
+#### 1. 必要なツールの確認・インストール
 
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+まず、以下のコマンドでHomebrewがインストールされているか確認してください：
+```bash
+brew --version
+```
+Homebrewがインストールされていない場合は、[公式サイト](https://brew.sh/ja/)からインストールしてください。
 
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
+#### 2. Rubyの管理ツール（rbenv）をインストール
+```bash
+# rbenvのインストール
+brew install rbenv ruby-build
 
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
+# シェル設定の追加
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+source ~/.zshrc
+```
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+#### 3. 新しいRubyバージョンのインストール
+```bash
+# 最新の安定版Rubyをインストール
+rbenv install 3.3.9
+
+# デフォルトバージョンに設定
+rbenv global 3.3.9
+
+# 設定を確認
+ruby -v
+```
+
+#### 4. bundlerのインストール
+```bash
+gem install bundler
+```
+
+#### 5. プロジェクトの依存関係をインストール
+```bash
+
+# ローカルパスを設定（権限エラーを避けるため）
+bundle config set --local path 'vendor/bundle'
+
+# 依存関係をインストール
+bundle install
+```
+
+#### 6. ローカルサーバーの起動
+```bash
+bundle exec jekyll serve -l -H localhost
+```
+
+成功すると、`http://localhost:4000` でサイトを確認できます。
+
+### Windowsユーザー向け
+
+#### 1. Windows Subsystem for Linux (WSL) のインストール
+
+PowerShellを管理者権限で開き、以下を実行：
+```powershell
+wsl --install
+```
+再起動後、Ubuntu（または好みのLinuxディストリビューション）を設定してください。
+
+#### 2. WSL内で必要なパッケージをインストール
+```bash
+# システムをアップデート
+sudo apt update && sudo apt upgrade -y
+
+# 必要なパッケージをインストール
+sudo apt install ruby-dev ruby-bundler nodejs build-essential gcc make git
+```
+
+#### 3. bundlerの確認・インストール
+```bash
+# bundlerがインストールされているか確認
+bundle --version
+
+# もしインストールされていない場合
+gem install bundler
+```
+
+#### 4. プロジェクトの依存関係をインストール
+```bash
+# プロジェクトディレクトリに移動
+cd /mnt/c/path/to/your/poclab.github.io
+
+# または、WSL内にクローンした場合
+cd ~/poclab.github.io
+
+# 権限エラーを避けるためローカルパスを設定
+bundle config set --local path 'vendor/bundle'
+
+# 依存関係をインストール
+bundle install
+```
+
+#### 5. ローカルサーバーの起動
+```bash
+bundle exec jekyll serve -l -H localhost
+```
+
+成功すると、`http://localhost:4000` でサイトを確認できます。
+
+### トラブルシューティング
+
+#### よくある問題と解決方法
+
+**権限エラーが発生する場合：**
+```bash
+bundle config set --local path 'vendor/bundle'
+rm -f Gemfile.lock
+bundle install
+```
+
+**nokogiriのインストールエラー（macOS）：**
+```bash
+brew install libxml2 libxslt
+gem install nokogiri -- --use-system-libraries
+```
+
+**サーバーが起動しない場合：**
+```bash
+# Gemfile.lockを削除して再インストール
+rm Gemfile.lock
+bundle install
+
+# デフォルトポートで起動
+bundle exec jekyll serve -l -H localhost
+
+# ポートが使用中の場合は別のポートを使用
+bundle exec jekyll serve --port 4002 --host localhost
+```
+
+### 動作確認
+
+サーバーが正常に起動すると、以下のようなメッセージが表示されます：
+```
+Server address: http://localhost:4000
+Server running... press ctrl-c to stop.
+```
+
+ブラウザで `http://localhost:4000` にアクセスして、サイトが表示されることを確認してください。
+
+### 開発時のワークフロー
+
+1. ファイルを編集
+2. ブラウザで変更を確認（自動的に更新されます）
+3. 満足したらGitHubにプッシュ
+4. GitHub Pagesで自動的にサイトが更新されます
 
 ## Using Docker
 
@@ -71,17 +187,17 @@ You should now be able to access the website from `localhost:4000`.
 
 If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development coontainer configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
 
-# Maintenance
+## メンテナンス
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+テンプレートのバグレポートや機能リクエストは[GitHub経由で提出](https://github.com/academicpages/academicpages.github.io/issues/new/choose)してください。テンプレートのスタイルに関する質問については、[GitHubで新しいディスカッションを開始](https://github.com/academicpages/academicpages.github.io/discussions)してお気軽にお尋ねください。
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+このリポジトリは[Stuart Geiger](https://github.com/staeiou)によって[Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/)からフォーク（その後分離）されました。Minimal Mistakes Jekyll Themeは© 2016 Michael Rose、MIT Licenseで公開されています（LICENSE.mdを参照）。現在は[Robert Zupko](https://github.com/rjzupkoii)によってメンテナンスされており、追加のメンテナーを歓迎しています。
 
-## Bugfixes and enhancements
+## バグ修正と機能強化
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+バグ修正や機能強化をプルリクエストとして提出したい場合は、このリポジトリをテンプレートとして使用するのではなく、[フォーク](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)する必要があります。これにより、テンプレートのコピーをフォークに[同期](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork)することも可能になります。
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+残念ながら、Academic Pagesのようなテンプレートテーマでは、コアテーマのバグ修正や更新を取得するのが少し複雑になる1つの論理的な問題があります。このテンプレートを使用してカスタマイズした場合、同期を試みるとマージコンフリクトが発生する可能性があります。さまざまな.yml設定ファイルやMarkdownファイルを保存したい場合は、リポジトリを削除して再度フォークできます。または、手動でパッチを適用することもできます。
 
 ---
 <div align="center">
