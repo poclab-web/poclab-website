@@ -1,7 +1,12 @@
 # Academic Pages
 **Academic Pagesは、個人および研究者向けポートフォリオWebサイトのためのGitHub Pagesテンプレートです。**
+詳細は https://academicpages.github.io/ をご覧ください。このホームページは、academicpagesで公開されているものをフォークして作成しております。
 
 ![Academic Pages template example](images/homepage.png "Academic Pages template example")
+
+# 公開先のホームページのURL
+
+https://poclab-web.github.io/homepage.github.io/
 
 # はじめに
 
