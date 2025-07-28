@@ -39,7 +39,7 @@ collection: portfolio
 
 #### **機械学習手法**
 1. **特徴量エンジニアリング**: 分子記述子の最適化
-2. **回帰・分類モデル**: Random Forest,  XGBoost, Generative Pre-trained Transformer,　Gaussian Process Regression,　Neural Network
+2. **回帰・分類モデル**: Random Forest, XGBoost, Generative Pre-trained Transformer, Gaussian Process Regression, Neural Network
 3. **能動学習**: コストを考慮した自己改善型スクリーニング戦略
 
 #### **実験検証**
