@@ -72,8 +72,6 @@ collection: portfolio
 1. **創薬候補のスクリーニング**: 新規薬剤候補を作成したモデルによりスクリーニング。論文追加によるアプデも可能
 2. **新規分子の生成**: スクリーニング技術から、生成の評価関数として使用可能
 
-### 🔍 **社会実装の可能性**
-
 ## 関連論文
 
 - [DPPH Measurements and Structure—Activity Relationship Studies on the Antioxidant Capacity of Phenols](https://www.mdpi.com/2076-3921/13/3/309)  
