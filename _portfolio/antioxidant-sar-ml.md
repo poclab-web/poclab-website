@@ -14,9 +14,10 @@ collection: portfolio
 
 #### 1. **DPPH radical scavenging activity の構造活性相関**
 
-- 169種類のフェノール類のDPPH抗酸化活性測定
+- 178種類のフェノール類のDPPH抗酸化活性測定
 - 分子記述子と量子化学計算による構造特性の解析
 - イオン化ポテンシャル（IP）と抗酸化活性の相関解明
+- 速度論的側面と熱力学的側面による抗酸化能の評価
 
 #### 2. **多種抗酸化指標の包括的解析**
 
@@ -42,7 +43,7 @@ collection: portfolio
 
 #### **計算化学手法**
 
-1. **半経験的量子化学計算**: PM7法による分子最適化
+1. **量子化学計算**: 半経験的分子軌道法や密度汎関数理論による分子最適化とエネルギー計算
 2. **熱力学パラメータ算出**:
    - イオン化ポテンシャル（IP）
    - 結合解離エネルギー（BDE）
@@ -65,6 +66,7 @@ collection: portfolio
 - **イオン化ポテンシャル（IP）が最重要因子**: IP > 200 kcal/molで活性が大幅に低下
 - **ヒドロキシ基数の影響**: 2個以上のヒドロキシ基で高い抗酸化活性
 - **電子供与基の効果**: メトキシ基 > H > 電子求引性基の順で活性向上
+- **後続反応の影響**: カテコール骨格やヒドロキノン骨格で後続反応による活性向上
 
 #### **反応機構の分類**
 
@@ -80,7 +82,7 @@ collection: portfolio
 
 ### 📄 **定量的成果**
 
-- **169個のフェノール化合物**の包括的DPPH活性データベース構築
+- **178個のフェノール化合物**の包括的DPPH活性データベース構築
 - **タンニン酸**で最高活性（15.4 TEmol/mol）
 - **フェニル1,4-ジヒドロキシ-2-ナフトエート（DHNA-Ph）**が最適光増感剤
 
@@ -109,6 +111,9 @@ collection: portfolio
 この研究により、従来の個別的な抗酸化研究から、包括的・予測的アプローチへの転換が可能となり、効率的な抗酸化物質の探索・設計が実現されます。
 
 ## 関連論文
+
+- [Kinetic and thermodynamic evaluation of antioxidant reactions: factors influencing the radical scavenging properties of phenolic compounds in foods](https://scijournals.onlinelibrary.wiley.com/doi/10.1002/jsfa.70080)  
+  *Journal of the Science of Food and Agriculture*, 2025
 
 - [DPPH Measurements and Structure—Activity Relationship Studies on the Antioxidant Capacity of Phenols](https://www.mdpi.com/2076-3921/13/3/309)  
   *Antioxidants*, 2024, Vol. 13, No. 3, pp. 309
